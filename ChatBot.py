@@ -3,7 +3,7 @@ import openai
 import discord
 from discord.ext import commands
 
-from cogs import cogList
+import cogs
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -21,7 +21,7 @@ bot.ollama_url = ollama_url
 @bot.event
 async def on_ready():
     print('Adding cogs:')
-    for cog in cogList:
+    for cog in cogs.ollama_cogs:
         try:
             await bot.add_cog(cog(bot))
             print(f'Added {cog.__name__}')
