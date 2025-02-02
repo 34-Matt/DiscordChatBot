@@ -1,0 +1,5 @@
+discord.py
+openai
+tiktoken
+python-dotenv
+ollama
