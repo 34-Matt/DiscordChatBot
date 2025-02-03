@@ -140,7 +140,6 @@ class DeepChat(commands.Cog):
                 else:
                     await original_message.edit(content=text_main, view=DeepMessage(text_thought))
 
-            response = response.message["content"]
             self.active_thread[current_channel].append('assistant', response)
             
         except ResponseError as e:
